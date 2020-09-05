@@ -1,0 +1,32 @@
+// Extra small devices (portrait phones, less than 576px)
+// Small devices (landscape phones, less than 768px)
+// Medium devices (tablets, less than 992px)
+// Large devices (desktops, less than 1200px)
+@mixin media($breakpoint) {
+  @if $breakpoint == xxs {
+    @media (max-width: 350px) {
+      @content;
+    }
+  }
+  @if $breakpoint == xs {
+    @media (max-width: 575.98px) {
+      @content;
+    }
+  }
+  @if $breakpoint == sm {
+    @media (max-width: 768.98px) {
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    @media (max-width: 991.98px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    @media (max-width: 1199.98px) {
+      @content;
+    }
+  }
+}

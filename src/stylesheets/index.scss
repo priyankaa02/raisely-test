@@ -1,0 +1,53 @@
+@import './mixins';
+@import './colors';
+
+@font-face {
+  font-family: 'Avenir Book';
+  src: url(../fonts/AvenirLTStd-Book.otf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Playfair Regular';
+  src: url(../fonts/PlayfairDisplay-Regular.otf) format('truetype');
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font: inherit;
+}
+
+html {
+  font-size: 100%; // 1rem = 10px = 16px * 62.5%
+  height: 100%;
+
+  @include media(lg) {
+    font-size: 100%; // 1rem = 10px
+  }
+
+  @include media(md) {
+    font-size: 100%; // 1rem = 9px
+  }
+
+  @include media(sm) {
+    font-size: 100%; // 1rem = 8px
+  }
+
+  @include media(xs) {
+    font-size: 90%; // 7px
+  }
+}
+
+body {
+  font-size: 16px;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Playfair Regular';
+  font-weight: 400;
+  line-height: 1.15;
+  height: 100%;
+}
